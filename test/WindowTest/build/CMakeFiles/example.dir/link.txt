@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/example.dir/test.cpp.o CMakeFiles/example.dir/home/raven/BaseRenderer/src/Window.cpp.o  -o example -lGL -lGLU /usr/lib/x86_64-linux-gnu/libglfw.so.3.2 -lGLEW 
