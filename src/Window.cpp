@@ -58,3 +58,8 @@ Window::~Window ()
     glfwTerminate();
 
 }
+
+GLFWwindow* Window::winPtr ()
+{
+    return windowptr;
+}
