@@ -21,5 +21,4 @@ namespace Input {
     int getKey (Window& window,int key);
     void getCurPos (Window& window,double* xpos, double* ypos);
     void setCurPos (Window& window,int x, int y);
-
 }
