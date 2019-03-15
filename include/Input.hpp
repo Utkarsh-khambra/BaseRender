@@ -3,22 +3,23 @@
   Date-12/03/2019
 */
 #pragma once
+#define KEYBOARD          1
+#define CURSOR            2
+#define CURSOR_HIDDEN     3
+#define CURSOR_DISABLED   4
+#define MOUSE_KEY         5
+
 class Window;
-class Input{
-public:
-    Input ();
-    ~Input ();
-    inline void inputForWindow (Window* window);
+namespace Input {
     /* Mode should be one of the following
        KEYBOARD
        CURSOR
        CURSOR_HIDDEN
        CURSOR_DISABLED
        MOUSE_KEY */
-    void setInputMode (int Mode)
-    inline int getKey (int key);
-    inline void getCurPos (double* xpos, double* ypos);
-    inline void setCurPos (int x, int y);
-private:
-    Window* inputOnWindow = NULL;
-};
+    void setInputMode (Window& window, int Mode);
+    int getKey (Window& window,int key);
+    void getCurPos (Window& window,double* xpos, double* ypos);
+    void setCurPos (Window& window,int x, int y);
+
+}
