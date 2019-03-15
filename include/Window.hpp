@@ -9,6 +9,7 @@ public:
     void update ();
     void resize ();
     void makeCurrent ();
+    GLFWwindow* winPtr ();
 private:
     int width;
     int height;
