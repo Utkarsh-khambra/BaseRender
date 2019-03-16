@@ -45,6 +45,7 @@ void Window::update ()
 {
     glEnable(GL_DEPTH_TEST);
     glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glfwSwapBuffers(windowptr);
 }
 
 void Window::resize ()
@@ -62,4 +63,14 @@ Window::~Window ()
 GLFWwindow* Window::winPtr ()
 {
     return windowptr;
+}
+
+bool Window::isClosed ()
+{
+    return glfwWindowShouldClose(windowptr);
+}
+
+void Window::setWindowClosed ()
+{
+    glfwSetWindowShouldClose(windowptr, GLFW_TRUE);
 }
