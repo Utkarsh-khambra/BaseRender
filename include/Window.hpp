@@ -10,6 +10,8 @@ public:
     void resize ();
     void makeCurrent ();
     GLFWwindow* winPtr ();
+    bool isClosed ();
+    void setWindowClosed ();
 private:
     int width;
     int height;
