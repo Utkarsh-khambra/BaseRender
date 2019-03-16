@@ -18,11 +18,6 @@ namespace Input {
         //     glfwSetInputMode(window.winPtr(), GLFW_STICKY_MOUSE_KEYS, GL_TRUE);
     }
 
-    int getKey (Window& window,int key)
-    {
-        glfwGetKey(window.winPtr(), key);
-    }
-
     void getCurPos (Window& window,double* xpos, double* ypos)
     {
         glfwGetCursorPos(window.winPtr(), xpos, ypos);
@@ -33,4 +28,24 @@ namespace Input {
         glfwSetCursorPos(window.winPtr(), x, y);
     }
 
+    bool isPressed (Window& window, int key)
+    {
+        if (glfwGetKey (window.winPtr(), key) == GLFW_PRESS)
+            return true;
+        else
+            return false;
+    }
+
+    bool isReleased (Window& window, int key)
+    {
+        if (glfwGetKey(window.winPtr(), key) == GLFW_RELEASE)
+            return true;
+        else
+            return false;
+    }
+
+    void pollEvents ()
+    {
+        glfwPollEvents();
+    }
 }
