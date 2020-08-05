@@ -39,6 +39,8 @@ void Window::makeCurrent ()
         glfwTerminate();
         throw std::runtime_error("GLEW failed to load GL");
     }
+
+    glClearColor(0,0,0,0);
 }
 
 void Window::update ()

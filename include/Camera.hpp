@@ -28,7 +28,7 @@ public:
     glm::vec3 right();
     void info();
 private:
-    float fov_{60.0};
+    float fov_{glm::radians(60.0)};
     float aspact_{4.0/3.0};
     float nearPlane_{0.1};
     float farPlane_{100};
